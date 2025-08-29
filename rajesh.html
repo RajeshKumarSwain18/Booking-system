@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Booking System</title>
+  <link rel="stylesheet" href="rajesh.css">
+</head>
+<body>
+  <header>
+    <h1>Online Booking System</h1>
+    <nav>
+      <button onclick="showSection('movie')">🎬 Movies</button>
+      <button onclick="showSection('hotel')">🏨 Hotels</button>
+      <button onclick="showSection('doctor')">👨‍⚕ Doctors</button>
+      <button onclick="showSection('restaurant')">🍽 Restaurants</button>
+    </nav>
+  </header>
+
+  <!-- Booking Sections -->
+  <main>
+    <section id="movie" class="booking-section">
+      <h2>Book a Movie</h2>
+      <form onsubmit="bookNow(event, 'Movie')">
+        <label>Movie Name:</label>
+        <input type="text" required>
+        <label>Date:</label>
+        <input type="date" required>
+        <label>Seats:</label>
+        <input type="number" min="1" required>
+        <button type="submit">Book Movie</button>
+      </form>
+    </section>
+
+    <section id="hotel" class="booking-section hidden">
+      <h2>Book a Hotel</h2>
+      <form onsubmit="bookNow(event, 'Hotel')">
+        <label>Hotel Name:</label>
+        <input type="text" required>
+        <label>Check-in:</label>
+        <input type="date" required>
+        <label>Check-out:</label>
+        <input type="date" required>
+        <label>Guests:</label>
+        <input type="number" min="1" required>
+        <button type="submit">Book Hotel</button>
+      </form>
+    </section>
+
+    <section id="doctor" class="booking-section hidden">
+      <h2>Book a Doctor Appointment</h2>
+      <form onsubmit="bookNow(event, 'Doctor')">
+        <label>Doctor Name:</label>
+        <input type="text" required>
+        <label>Date:</label>
+        <input type="date" required>
+        <label>Time:</label>
+        <input type="time" required>
+        <button type="submit">Book Appointment</button>
+      </form>
+    </section>
+
+    <section id="restaurant" class="booking-section hidden">
+      <h2>Book a Restaurant Table</h2>
+      <form onsubmit="bookNow(event, 'Restaurant')">
+        <label>Restaurant Name:</label>
+        <input type="text" required>
+        <label>Date:</label>
+        <input type="date" required>
+        <label>Time:</label>
+        <input type="time" required>
+        <label>Guests:</label>
+        <input type="number" min="1" required>
+        <button type="submit">Book Table</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Online Booking System</p>
+  </footer>
+
+  <script src="rajesh.js"></script>
+</body>
+</html>
